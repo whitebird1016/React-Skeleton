@@ -10,7 +10,7 @@ body {
 .container {
   margin: 2rem auto;
   max-width: 800px;
-  display: flex;
+  display: grid;
   justify-content: center;
 }
 
@@ -38,7 +38,7 @@ body {
   position: relative;
   overflow: hidden;
   background-color: #fff;
-
+  text-align: center;
   &::after {
     position: absolute;
     top: 0;
@@ -62,4 +62,10 @@ body {
       transform: translateX(100%);
     }
   }
+}
+
+.linkedin-card{
+  margin-top: 30px;
+  position: relative;
+  top: -100px;
 }
