@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import Skeleton from './components/Skeleton';
 
 function App() {
+
+  const [isLoaded, setLoaded] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Skeleton
+        width = "200px"
+        height = "40px"
+        loaded = {isLoaded}
+      >
+        <a>tests</a>
+      </Skeleton>
+
+
+      <div style={{display: "inherit", marginTop: "50px"}}>
+        <button onClick = {() => setLoaded(!isLoaded)}>Push data</button>
+      </div>
+
     </div>
   );
 }

@@ -1,0 +1,65 @@
+
+body {
+  background: rgb(77, 76, 76);
+  margin: 0;
+  padding: 0;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
+  color: #333;
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes loading {
+  to {
+    background-position:
+      350% 0,        
+      var(--title-position),  
+      var(--desc-line-1-position),
+      var(--desc-line-2-position),
+      var(--avatar-position),
+      var(--footer-position),
+      0 0
+    ;
+  }
+}
+
+.skeleton {
+  display: block;
+  background-color: #E7EDF1;
+}
+
+.skeleton-box {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(lightgrey, 0) 0,
+      rgba(lightgrey, 0.8) 70%,
+
+      rgba(lightgrey, 0)
+    );
+    animation: shimmer 1.5s infinite;
+    content: '';
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
