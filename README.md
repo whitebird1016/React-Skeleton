@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## React Skeleton Component
+# React Skeleton Component
 
 ### Basic Usage Example
 
