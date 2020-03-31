@@ -1,6 +1,6 @@
 
 body {
-  background: rgb(77, 76, 76);
+  background: #C5CAE9;
   margin: 0;
   padding: 0;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue;
@@ -10,27 +10,10 @@ body {
 .container {
   margin: 2rem auto;
   max-width: 800px;
-  display: grid;
+  display: flex;
   justify-content: center;
-}
-
-@keyframes loading {
-  to {
-    background-position:
-      350% 0,        
-      var(--title-position),  
-      var(--desc-line-1-position),
-      var(--desc-line-2-position),
-      var(--avatar-position),
-      var(--footer-position),
-      0 0
-    ;
-  }
-}
-
-.skeleton {
-  display: block;
-  background-color: #E7EDF1;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .skeleton-box {
@@ -49,8 +32,7 @@ body {
     background-image: linear-gradient(
       90deg,
       rgba(lightgrey, 0) 0,
-      rgba(lightgrey, 0.8) 70%,
-
+      rgba(lightgrey, 0.6) 70%,
       rgba(lightgrey, 0)
     );
     animation: shimmer 1.5s infinite;
@@ -68,4 +50,9 @@ body {
   margin-top: 30px;
   position: relative;
   top: -100px;
+}
+
+.sep-components{
+  margin-top: 10px;
+  margin-right: 40px;
 }

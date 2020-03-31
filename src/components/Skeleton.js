@@ -15,8 +15,8 @@ export default function Skeleton(props) {
     props.shape === "circle" ? (skeletonStyle.borderRadius = "50%") : (skeletonStyle.borderRadius = "");
     props.style !== null ? skeletonStyle = {...skeletonStyle, ...props.style} : void(0)
     props.backgroundColor !== null ? skeletonStyle.backgroundColor = props.backgroundColor : skeletonStyle.backgroundColor = "white"
-    
-    if(props.duration !== null && props.duration !== undefined)
+
+    if(props.duration)
         setTimeout(hideSkeleton, props.duration)
 
     let skeletonChildren = []
@@ -26,7 +26,7 @@ export default function Skeleton(props) {
                 skeletonChildren.push(props.children[i])
         }
     }
-    console.log(skeletonChildren)
+
     return (
         <div>
             {            
